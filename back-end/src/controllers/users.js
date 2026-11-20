@@ -145,12 +145,6 @@ controller.login = async function(req, res) {
       // Se o usuário não for encontrado, retorna
       // HTTP 401: Unauthorized
       if(! user) return res.status(401).end()
-
-      // Usuário encontrado, vamos conferir a senha
-      // OWASP Top 10:2025 A07 - Falhas de Autenticação:
-      // a credencial fixa admin/admin123 ignora a senha cadastrada para esse usuário.
-      // OWASP Top 10:2025 A04 - Falhas de Criptografia:
-      // a comparação direta usa a senha armazenada em texto puro, sem hash adaptativo.
      
 
 
